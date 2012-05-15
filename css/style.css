@@ -1,0 +1,44 @@
+body {
+    margin-top: 40px;
+    font-family: verdana;
+}
+label {
+    text-align: right;
+    width: 200px;
+    float: left;
+    padding-right: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #669999;
+}
+
+.ip {
+    color: #00f;
+}
+
+p {
+    margin: 6px;
+}
+
+.na {
+    color: #ccc;
+    font-size: 50%;
+
+}
+
+table {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+table tr td {
+	text-align: left;
+	padding: 3px 5px;
+}
+
+table tr td.key {
+	font-weight: bold;
+	white-space: nowrap;
+}
