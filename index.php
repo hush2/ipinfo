@@ -57,7 +57,7 @@ geoip_close($giisp);
 geoip_close($gicity);
 
 if(!function_exists('apache_request_headers')) {
-    include 'lib/apache_request_headers.php';
+    include 'vendor/apache_request_headers.php';
 }
 
 $headers = apache_request_headers();
