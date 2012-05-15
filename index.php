@@ -15,6 +15,8 @@ $giisp  = geoip_open(GEO_DIR . 'GeoIPISP.dat',  GEOIP_STANDARD);
 
 if (isset($_GET['host']) && !empty($_GET['host'])) {
 
+    $hostip = $_GET['host'];    // for input box
+
     $host = trim($_GET['host']);
     if (filter_var($host, FILTER_VALIDATE_IP) === false) {
         $ip = gethostbyname($host);
@@ -23,6 +25,7 @@ if (isset($_GET['host']) && !empty($_GET['host'])) {
         }
     } else {
         $ip = $host;
+        $host = gethostbyaddr($ip);
     }
 
 } else {

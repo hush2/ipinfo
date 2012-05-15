@@ -8,7 +8,7 @@
 
 <body>
     <form action='./' method='get'>
-    <p><label>Check Host/IP:</label><input value='<?= $host ?>' type='text' name='host'><input type='submit' value='Go'><p>
+    <p><label>Check Host/IP:</label><input value='<?= $hostip ?>' type='text' name='host'><input type='submit' value='Go'><p>
     </form>
     <h2><?= $host ?></h2>
 
