@@ -12,7 +12,7 @@
     </form>
     <h2><?= $host ?></h2>
 
-    <p><label>IP:</label><span class='ip'><?= $ip ?></span></p>
+    <p><label>IP:</label><span class='ip <?= $ip == 'N/A' ? 'na' : '' ?>'><?= $ip ?></span></p>
     <p><label>Country:</label><?= $country_name ?>&nbsp;&nbsp;
     <?php if ($country_name !== $na): ?>
         <img src='images/<?= strtolower($country_code) ?>.png'>

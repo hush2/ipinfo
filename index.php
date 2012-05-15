@@ -15,21 +15,19 @@ $giisp  = geoip_open(GEO_DIR . 'GeoIPISP.dat',  GEOIP_STANDARD);
 
 if (isset($_GET['host']) && !empty($_GET['host'])) {
 
-    $ip = trim($_GET['host']);
-    if (filter_var($ip, FILTER_VALIDATE_IP) === false) {
-       $ip = gethostbyname($ip);
-       $host = $_GET['host'];
+    $host = trim($_GET['host']);
+    if (filter_var($host, FILTER_VALIDATE_IP) === false) {
+        $ip = gethostbyname($host);
+        if ($ip == $host) {
+            $ip = 'N/A';
+        }
     } else {
-        $ip   = $_GET['host'];
-        $host = $ip;
+        $ip = $host;
     }
 
-
-
-
 } else {
-    $ip   = $_SERVER['REMOTE_ADDR'];
-    $host = $ip;
+    $host = $_SERVER['REMOTE_ADDR'];
+    $ip   = $host;
 }
 
 $na = "<span class='na'>N/A</span>";
