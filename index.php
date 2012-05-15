@@ -6,7 +6,7 @@ include 'vendor/geoip.inc';
 include 'vendor/geoipcity.inc';
 include 'vendor/geoipregionvars.php';
 
-define('GEO_DIR', './data/');
+define('GEO_DIR', 'data/');
 
 $gi     = geoip_open(GEO_DIR . 'GeoIP.dat',     GEOIP_STANDARD);
 $gicity = geoip_open(GEO_DIR . 'GeoIPCity.dat', GEOIP_STANDARD);
@@ -28,7 +28,6 @@ if (isset($_GET['host']) && !empty($_GET['host'])) {
         $ip = $hostip;
         $host = gethostbyaddr($ip);
     }
-
 }
 else {
     $ip = $_SERVER['REMOTE_ADDR'];
@@ -68,4 +67,4 @@ if(!function_exists('apache_request_headers')) {
 
 $headers = apache_request_headers();
 
-include 'index_view.php';
+include 'views/index_view.php';
