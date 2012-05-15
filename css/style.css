@@ -9,11 +9,20 @@ label {
     padding-right: 20px;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
+}
+
+h3 {
     color: #669999;
 }
 
+input[type=text] {
+    width: 240px;
+}
+h2 {
+    color: #f00;
+}
 .ip {
     color: #00f;
 }

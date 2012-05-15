@@ -8,9 +8,9 @@
 
 <body>
     <form action='/' method='get'>
-    <p><label>Check IP:</label><input type='text' name='host'><input type='submit' value='Go'><p>
+    <p><label>Check Host/IP:</label><input value='<?= $host ?>' type='text' name='host'><input type='submit' value='Go'><p>
     </form>
-    <h2>Your IP</h2>
+    <h2><?= $host ?></h2>
 
     <p><label>IP:</label><span class='ip'><?= $ip ?></span></p>
     <p><label>Country:</label><?= $country_name ?>&nbsp;&nbsp;
@@ -28,7 +28,7 @@
     <p><label>Longitude</label><?= $long ?></p>
 
     <?php if (!isset($_GET['host'])): ?>
-        <h2>Your Request Headers</h2>
+        <h3>Your Request Headers</h3>
         <table>
         <?php foreach($headers as $key => $val): ?>
             <tr><td class='key'><?= $key ?></td><td><?= $val ?></tr>
